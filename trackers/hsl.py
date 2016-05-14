@@ -24,6 +24,10 @@ http://www.hsl.fi/kaupunkipyörät
 import hcb
 import time
 
+# Send Accept header to get JSON output from OpenTripPlanner.
+# https://github.com/opentripplanner/OpenTripPlanner/wiki/JsonOrXml
+HEADERS = {"Accept": "application/json"}
+
 
 class Tracker:
 
@@ -39,7 +43,7 @@ class Tracker:
         if time.time() - self._utime < 60:
             return self._stations
         url = "http://api.digitransit.fi/routing/v1/routers/hsl/bike_rental"
-        stations = hcb.http.request_json(url)
+        stations = hcb.http.request_json(url, headers=HEADERS)
         stations = [dict(
             id=station["id"],
             name=station["name"],
