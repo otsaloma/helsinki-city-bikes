@@ -51,8 +51,9 @@ MapQuickItem {
             font.family: "sans-serif"
             font.pixelSize: 18
             font.weight: Font.DemiBold
+            horizontalAlignment: Text.AlignRight
             text: station.bikes
-            width: Math.max(13, implicitWidth)
+            width: Math.max(13, contentWidth)
         }
         Text {
             id: capacityText
@@ -63,8 +64,9 @@ MapQuickItem {
             font.family: "sans-serif"
             font.pixelSize: 18
             font.weight: Font.DemiBold
+            horizontalAlignment: Text.AlignLeft
             text: station.capacity
-            width: Math.max(13, implicitWidth)
+            width: Math.max(13, contentWidth)
         }
         Rectangle {
             id: bar
