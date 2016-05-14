@@ -7,7 +7,7 @@
 Name: harbour-helsinki-city-bikes
 Version: 0.0.1
 Release: 1
-Summary: HSL city bike stations and their real-time occupancy
+Summary: Locations and real-time occupancy of Helsinki city bike stations
 License: GPLv3+
 URL: https://github.com/otsaloma/helsinki-city-bikes
 Source: %{name}-%{version}.tar.xz
@@ -24,7 +24,7 @@ Requires: sailfishsilica-qt5
 View the locations of city bike stations and their occupancy.
 
 Included are all Helsinki Region Transport (HSL) city bike stations.
-Data is from the Digitransit HSL API and should be real-time.
+Data is real-time from the Digitransit HSL API.
 
 %prep
 %setup -q
