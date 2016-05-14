@@ -122,7 +122,8 @@ def request_json(url, encoding="utf_8", retry=1, headers=None):
     Request, parse and return JSON data at `url`.
 
     Try again `retry` times in some particular cases that imply
-    a connection error.
+    a connection error. `headers` should be a dictionary of custom
+    headers to add to the defaults :attr:`http.HEADERS`.
     """
     text = request_url(url, encoding, retry, headers)
     if not text.strip() and retry > 0:
@@ -145,7 +146,8 @@ def request_url(url, encoding=None, retry=1, headers=None):
 
     If `encoding` is ``None``, return bytes, otherwise decode data
     to text using `encoding`. Try again `retry` times in some particular
-    cases that imply a connection error.
+    cases that imply a connection error. `headers` should be a dictionary
+    of custom headers to add to the defaults :attr:`http.HEADERS`.
     """
     print("Requesting {}".format(url))
     try:
