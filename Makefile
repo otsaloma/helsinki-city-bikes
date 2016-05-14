@@ -1,7 +1,7 @@
 # -*- coding: us-ascii-unix -*-
 
 NAME       = harbour-helsinki-city-bikes
-VERSION    = 0.0.1
+VERSION    = 0.1
 
 DESTDIR    =
 PREFIX     = /usr
