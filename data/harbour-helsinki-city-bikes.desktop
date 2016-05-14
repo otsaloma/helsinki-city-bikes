@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=City Bikes
+Exec=sailfish-qml harbour-helsinki-city-bikes
+Icon=harbour-helsinki-city-bikes
+Type=Application
+X-Nemo-Application-Type=silica-qt5
