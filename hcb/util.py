@@ -54,9 +54,9 @@ def locked_method(function):
     return wrapper
 
 @contextlib.contextmanager
-def silent(*exceptions):
+def silent(*exceptions, tb=False):
     """Try to execute body, ignoring `exceptions`."""
     try:
         yield
     except exceptions:
-        pass
+        if tb: traceback.print_exc()
