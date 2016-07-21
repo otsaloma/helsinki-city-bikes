@@ -40,13 +40,13 @@ ApplicationWindow {
         // Return path to icon suitable for user's screen,
         // finding the closest match to Theme.pixelRatio.
         var ratios = [1.00, 1.25, 1.50, 1.75, 2.00];
-        var min_i = -1, min_diff = 1000;
+        var minIndex = -1, minDiff = 1000;
         for (var i = 0; i < ratios.length; i++) {
             var diff = Math.abs(Theme.pixelRatio - ratios[i]);
-            min_i = diff < min_diff ? i : min_i;
-            min_diff = Math.min(min_diff, diff);
+            minIndex = diff < minDiff ? i : minIndex;
+            minDiff = Math.min(minDiff, diff);
         }
-        var ratio = ratios[min_i].toFixed(2);
+        var ratio = ratios[minIndex].toFixed(2);
         return "icons/%1@%2.png".arg(name).arg(ratio);
     }
 }
