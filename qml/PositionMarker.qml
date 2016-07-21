@@ -19,13 +19,15 @@
 import QtQuick 2.0
 import QtLocation 5.0
 import QtPositioning 5.3
+import Sailfish.Silica 1.0
 
 MapQuickItem {
     anchorPoint.x: sourceItem.width/2
     anchorPoint.y: sourceItem.height/2
     coordinate: gps.position.coordinate
     sourceItem: Image {
-        source: "icons/position.png"
+        smooth: false
+        source: app.getIcon("position")
     }
     Behavior on coordinate {
         CoordinateAnimation {

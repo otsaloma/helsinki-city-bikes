@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import QtLocation 5.0
 import QtPositioning 5.3
+import Sailfish.Silica 1.0
 import "."
 
 Map {
@@ -79,7 +80,6 @@ Map {
 
     Component.onCompleted: {
         // Use a daytime gray street map if available.
-        // Needed properties available since Sailfish OS 1.1.0.38.
         for (var i = 0; i < map.supportedMapTypes.length; i++) {
             var type = map.supportedMapTypes[i];
             if (type.style  === MapType.GrayStreetMap &&
@@ -92,7 +92,7 @@ Map {
         gps.onInitialCenterChanged.connect(map.centerOnPosition);
         // XXX: Must set zoomLevel in onCompleted.
         // http://bugreports.qt-project.org/browse/QTBUG-40779
-        map.setZoomLevel(14);
+        map.setZoomLevel(Screen.sizeCategory >= Screen.Large ? 15 : 14);
         map.ready = true;
     }
 

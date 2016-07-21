@@ -32,9 +32,11 @@ Page {
             PageHeader { title: "Helsinki City Bikes" }
             SectionHeader { text: "Info" }
             ListItemLabel {
-                color: Theme.primaryColor
                 font.pixelSize: Theme.fontSizeSmall
                 height: implicitHeight + Theme.paddingLarge
+                horizontalAlignment: implicitWidth > parent.width -
+                    anchors.leftMargin - anchors.rightMargin ?
+                    Text.AlignLeft : Text.AlignHCenter
                 text: "You need to register to use city bikes. See HSL web pages for more information."
                 wrapMode: Text.WordWrap
             }
@@ -68,9 +70,11 @@ Page {
                 text: "Copyright © 2016 Osmo Salomaa"
             }
             ListItemLabel {
-                color: Theme.primaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
+                font.pixelSize: Theme.fontSizeSmall
                 height: implicitHeight + Theme.paddingLarge
+                horizontalAlignment: implicitWidth > parent.width -
+                    anchors.leftMargin - anchors.rightMargin ?
+                    Text.AlignLeft : Text.AlignHCenter
                 text: "Helsinki City Bikes is free software released under the GNU General Public License (GPL), version 3 or later."
                 wrapMode: Text.WordWrap
             }

@@ -32,13 +32,13 @@ MapQuickItem {
             anchors.margins: -Theme.paddingSmall
             anchors.right: capacityText.right
             anchors.top: separator.top
-            color: "#bb000000"
+            color: "#d0000000"
         }
         Text {
             id: separator
             color: "white"
             font.family: "sans-serif"
-            font.pixelSize: 18
+            font.pixelSize: Math.round(Theme.pixelRatio*18)
             font.weight: Font.DemiBold
             text: "/"
         }
@@ -46,27 +46,25 @@ MapQuickItem {
             id: bikesText
             anchors.baseline: separator.baseline
             anchors.right: separator.left
-            anchors.rightMargin: 2
+            anchors.rightMargin: Math.round(Theme.pixelRatio*3)
             color: "white"
             font.family: "sans-serif"
-            font.pixelSize: 18
+            font.pixelSize: Math.round(Theme.pixelRatio*18)
             font.weight: Font.DemiBold
             horizontalAlignment: Text.AlignRight
             text: station.bikes
-            width: Math.max(13, contentWidth)
         }
         Text {
             id: capacityText
             anchors.baseline: separator.baseline
             anchors.left: separator.right
-            anchors.leftMargin: 2
+            anchors.leftMargin: Math.round(Theme.pixelRatio*2)
             color: "white"
             font.family: "sans-serif"
-            font.pixelSize: 18
+            font.pixelSize: Math.round(Theme.pixelRatio*18)
             font.weight: Font.DemiBold
             horizontalAlignment: Text.AlignLeft
             text: station.capacity
-            width: Math.max(13, contentWidth)
         }
         Rectangle {
             id: bar
@@ -77,7 +75,7 @@ MapQuickItem {
             color: Theme.highlightColor
             height: Theme.paddingSmall
             width: Math.floor(station.bikes/station.capacity *
-                              (bubble.width - 2*Theme.paddingSmall));
+                              (bubble.width - 2*anchors.leftMargin));
 
         }
         Image {
@@ -86,7 +84,8 @@ MapQuickItem {
             anchors.top: bubble.bottom
             // Try to avoid a stripe between bubble and arrow.
             anchors.topMargin: -0.5
-            source: "icons/bubble-arrow.png"
+            smooth: false
+            source: app.getIcon("bubble-arrow")
         }
     }
     property int bikes: 0
