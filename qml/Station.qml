@@ -37,20 +37,20 @@ MapQuickItem {
         Text {
             id: separator
             color: "white"
+            font.bold: true
             font.family: "sans-serif"
             font.pixelSize: Math.round(Theme.pixelRatio*18)
-            font.weight: Font.DemiBold
             text: "/"
         }
         Text {
             id: bikesText
             anchors.baseline: separator.baseline
             anchors.right: separator.left
-            anchors.rightMargin: Math.round(Theme.pixelRatio*3)
+            anchors.rightMargin: Math.round(Theme.pixelRatio*2)
             color: "white"
+            font.bold: true
             font.family: "sans-serif"
             font.pixelSize: Math.round(Theme.pixelRatio*18)
-            font.weight: Font.DemiBold
             horizontalAlignment: Text.AlignRight
             text: station.bikes
         }
@@ -60,9 +60,9 @@ MapQuickItem {
             anchors.left: separator.right
             anchors.leftMargin: Math.round(Theme.pixelRatio*2)
             color: "white"
+            font.bold: true
             font.family: "sans-serif"
             font.pixelSize: Math.round(Theme.pixelRatio*18)
-            font.weight: Font.DemiBold
             horizontalAlignment: Text.AlignLeft
             text: station.capacity
         }
