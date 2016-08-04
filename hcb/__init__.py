@@ -17,7 +17,7 @@
 
 """Show real-time information about city bikes and stations."""
 
-__version__ = "0.1"
+__version__ = "1.0"
 
 try:
     import pyotherside
