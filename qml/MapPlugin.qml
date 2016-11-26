@@ -20,9 +20,9 @@ import QtQuick 2.0
 import QtLocation 5.0
 
 Plugin {
-    name: "nokia"
+    name: "here"
     parameters: [
         PluginParameter { name: "app_id"; value: "a9uv4LHQyZdSthfqUnMZ"; },
-        PluginParameter { name: "token"; value: "ZGAEyb-q2vo56tsCKtSkUg"; }
+        PluginParameter { name: "app_code"; value: "ZGAEyb-q2vo56tsCKtSkUg"; }
     ]
 }
