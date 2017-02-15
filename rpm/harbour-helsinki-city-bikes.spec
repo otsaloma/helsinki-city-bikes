@@ -5,7 +5,7 @@
 %define __provides_exclude_from ^%{_datadir}/.*$
 
 Name: harbour-helsinki-city-bikes
-Version: 1.0.205
+Version: 1.0.210
 Release: 1
 Summary: Locations and real-time occupancy of Helsinki city bike stations
 License: GPLv3+
