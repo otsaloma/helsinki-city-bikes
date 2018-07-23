@@ -1,8 +1,7 @@
 Helsinki City Bikes
 =====================
 
-[![Build Status](https://travis-ci.org/otsaloma/helsinki-city-bikes.svg)](
-https://travis-ci.org/otsaloma/helsinki-city-bikes)
+![Not Maintained](https://img.shields.io/maintenance/no/2017.svg)
 
 Helsinki City Bikes is an application for Sailfish OS to view the
 locations of Helsinki Region Transport (HSL) [city bike][1] stations and
